@@ -74,16 +74,18 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
+ width: 100%;
+ max-width: 100vw;      
   height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   background-image: url('assets/hero.png'); /* <- Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  justify-content: top;
   text-align: left;
   padding-top: 60px;
   
@@ -112,17 +114,18 @@ nav a:hover {
   z-index: 1;
 }
 .typewriter {
-   width: 100%;
+   width: 70%;
   max-width: 150%;
   display: inline-block;
   overflow: hidden;
   border-right: 2px solid white;
-  white-space: nowrap;
+  white-space: normal;
   animation: typing 3s steps(22) forwards, blink 10s step-end infinite;
   font-size: 2.5rem;
   color: white;
   margin: 0 auto;
   text-align: left;
+    overflow-wrap: break-word;
 }
 .typewriter.delay {
   animation-delay: 3.5s;
@@ -290,19 +293,13 @@ nav a:hover {
 
 .contact-custom {
   position: relative;
-  width: 100vw; 
+  width: 100%;
   max-width: 100vw;
-  background-image: url('assets/contact.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Blue to purple gradient */
   margin: 0;
   padding: 10rem 5rem;
-  color: rgb(230, 228, 228)/* Make text visible */
-   
+  color: white;
 }
-
-
 
 
 .contact-form input,
@@ -340,21 +337,32 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  nav li {
-    margin: 0.5rem 0;
-  }
-
-  .section {
-    padding: 3rem 5%;
-  }
-
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero p,
+  .typewriter {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+   nav ul {
+    flex-direction: column;   /* Stack links vertically */
+    align-items: center;      /* Center them */
+    gap: 1rem;                /* Space between them */
+    padding: 1rem 0;
+  }
+ nav li {
+    margin: 0.5rem 0;         /* Vertical spacing */
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* one column layout */
+  }
+
+  .contact-form {
+    padding: 2rem 1rem;
   }
 }
