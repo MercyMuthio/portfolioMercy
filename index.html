@@ -8,15 +8,28 @@
   <link rel="stylesheet" href="style.css">
              
 </head>
+
+<div class="top-bar">
+  <p>🌟 Welcome to my portfolio — Let's build something amazing!</p>
+</div>
  <body>
+   <div class="page-wrapper">
   <!-- Navigation -->
   <header>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <details class="dropdown">
+        <summary>Education ▼</summary>
+        <ul class="dropdown-menu">
+         <li><a href="#education">Educational Background</a></li>
+         <li><a href="#skills">Skills</a></li>
+         <li><a href="#resume" target="_blank">Resume</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+          </details>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -54,18 +67,38 @@
         <li><strong>Certification in Responsive Web Design</strong> - freeCodeCamp, 2021</li>
         <p>Learned how to create mobile-friendly, flexible websites using HTML and CSS, with a focus on layouts, media queries, and accessibility.</p>
     
-        <div class="skills">
-      <h3>Skills</h3>
+      <section id="skills" class="section">
+      <div class="skills">
+      <h2>Skills</h3>
       <ul>
         <li>HTML5 & CSS3</li>
         <li>JavaScript (ES6+)</li>
         <li>React.js</li>
         <li>Rust</li>
         <li>Python</li>
+        
 
       </ul>
        </div>
+        <section id="resume" class="section">
+        <h2>Resume</h2>
+        <p>Download my resume to learn more about my professional journey, skills, and experiences.</p>
+        <p>Feel free to reach out if you have any questions or would like to discuss potential opportunities!</p>
+        <p>Click the button below to download my resume:</p>
         <a href="assets/MercyMuthioMualukoResume (6).pdf" download class="btn">Download Resume</a>
+        <div class ="Interests">
+          <h2>Interests</h2>
+         <ol type="a">
+            <li>Web Development</li>
+            <li>UI/UX Design</li>
+            <li>Open Source Contributions</li>
+            <li>Community Building</li>
+            <li>Continuous Learning</li>
+            <li>Digital accessibility</li>
+            <li>Responsive Design</li>
+            </ol>
+        
+        </div>
         </section>
 
       <!-- Projects Section -->
@@ -74,23 +107,26 @@
         <div class="project-grid">
            <!-- Project 1 -->
            <div class="project-card">
-           <img src="assets/project-screenshots/project1.jpg" alt="E-Commerce Site">
+           <img src="assets/project1.png" alt="E-Commerce Site">
           <h3>E-Commerce Website</h3>
-          <p>A fully responsive online store built with React and Firebase.</p>
+          <p>A fully responsive online store.</p>
           <div class="project-links">
-          <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+        
+          <a href="https://github.com/MercyMuthio/ecomm.git">
+            <i class="fab fa-github"></i> Code</a>
+         
            </div>
            </div>
 
+
               <!-- Project 2 -->
           <div class="project-card">
-          <img src="assets/project-screenshots/project2.jpg" alt="Weather App">
-          <h3>Weather Dashboard</h3>
-          <p>Real-time weather application using the OpenWeather API.</p>
+          <img src="assets/project2.png" alt="Transaction Reconciliation">
+          <h3>Transaction Reconciliation</h3>
+          <p>Checks if internal records match external statements</p>
           <div class="project-links">
-          <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+          <a href="https://github.com/MercyMuthio/transactionTRR.git">
+          <i class="fab fa-github"></i> Code</a>
             </div>
             </div>
             </div>
@@ -112,7 +148,7 @@
        </form>
 
       <div class="social-links">
-  <a href="mailto:muslukomercy8@gmail.com">✉️</a>
+  <a href="mailto:mualukomercy8@gmail.com">✉️</a>
 <a href="https://github.com/MercyMuthio">🐙</a>
 <a href="https://www.linkedin.com/in/mercy-mualuko-0415232a2/">💼</a>
 <a href="0769270388">📞 </a>
@@ -122,6 +158,7 @@
     <footer>
      <p>&copy; 2025 Mercy Mualuko. All rights reserved.</p>
     </footer>
+</div>
 </body>
 </html>
 
