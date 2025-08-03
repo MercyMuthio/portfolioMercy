@@ -11,6 +11,7 @@ This website showcases my skills, projects, education, and contact information i
 <!-- Example for "Project Overview" -->
 <a id="project-overview"></a>
 ## 🌐 Project Overview
+```bash
 1.[Live Demo](#livedemo)
 2. [🌟 Features](#features)
 3. [Technology Stack](#tachnologystack)
@@ -22,7 +23,7 @@ This website showcases my skills, projects, education, and contact information i
 9. [Contact](#contact)
 10. [License](#lincence)
 11. [Acknowledgments ](#acknowledge)
-
+```
 
 ✨ Live Demo
 🔗 [View Portfolio Website](https://mercymuthio.github.io/portfolioMercy/)
