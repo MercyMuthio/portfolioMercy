@@ -95,6 +95,9 @@ start index.html  # Windows
 
 
 
+### Mobile View
+<img src="assets/mobile view.jpeg" alt="Mobile Demo" width="200">
+
 
 
 
