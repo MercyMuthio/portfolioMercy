@@ -93,13 +93,15 @@ start index.html  # Windows
 
 ## Screenshots
 
+### Desktop View
+<img src="assets/Desktop view.png" alt="Mobile Demo" width="200">
 
 
 ### Mobile View
 <img src="assets/mobile view.jpeg" alt="Mobile Demo" width="200">
 
-
-
+### Projects View
+<img src="assets/Project view.png" alt="Mobile Demo" width="200">
 
 
 
@@ -131,6 +133,7 @@ This project is open-source under the [MIT License](https://img.shields.io/badge
 ##  Acknowledgments
 Hackathon mentors and judges
 CSS-only navigation inspired by modern frontend patterns
+
 
 
 
