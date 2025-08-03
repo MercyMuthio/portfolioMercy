@@ -579,7 +579,8 @@ nav ul {
   border-radius: 50%; /* Creates circular shape */
   object-fit: cover; /* Ensures image fills circle without distortion */
   border:5px solid var(--primary-color);
-  box-shadow: 0 4px 15px rgba(155, 27, 27, 0.1); /* Subtle shadow */
+   transform: translateZ(0);
+ 
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
@@ -590,7 +591,10 @@ nav ul {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .circular-image {
-    width: 150px; /* Slightly smaller on mobile */
-    height: 150px;
+    
+    border-radius: 50%; /* Must be redeclared in mobile query */
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; /* Critical for circle crops */
   }
 }
