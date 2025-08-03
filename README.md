@@ -12,7 +12,7 @@ This website showcases my skills, projects, education, and contact information i
 <a id="project-overview"></a>
 ## 🌐 Project Overview
 ```bash
-1.[Live Demo](#livedemo)
+1.[Live Demo](#live-demo)
 2. [🌟 Features](#features)
 3. [Technology Stack](#tachnologystack)
 4. [Project Structure](#projectstructure)
