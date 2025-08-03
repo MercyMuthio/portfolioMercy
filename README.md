@@ -45,12 +45,10 @@ portfolio/
 ## 🚀 How to Run Locally
 
 1. Clone the repository:
-   ```bash
   git clone https://github.com/MercyMuthio/portfolio-site.git
 
 2.Open the folder:
-
-  cd portfolio-site
+   cd portfolio-site
 3.Launch index.html in your browser.
 
 ✨ Live Demo
