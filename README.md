@@ -94,14 +94,14 @@ start index.html  # Windows
 ## Screenshots
 
 ### Desktop View
-<img src="assets/Desktop view.png" alt="Mobile Demo" width="200">
+<img src="assets/Desktop view.png" alt="Mobile Demo" width="500">
 
 
 ### Mobile View
 <img src="assets/mobile view.jpeg" alt="Mobile Demo" width="200">
 
 ### Projects View
-<img src="assets/Project view.png" alt="Mobile Demo" width="200">
+<img src="assets/Project view.png" alt="Mobile Demo" width="500">
 
 
 
