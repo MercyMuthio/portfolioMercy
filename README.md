@@ -5,6 +5,26 @@ This website showcases my skills, projects, education, and contact information i
 
 ---
 
+✨ Live Demo
+🔗 [View Portfolio Website](https://mercymuthio.github.io/portfolioMercy/)
+
+📌 Table of Contents
+Project Overview
+
+Features
+
+Technologies Used
+
+Setup & Installation
+
+Folder Structure
+
+Customization Guide
+
+Deployment
+
+License
+
 ## 🌟 Features
 
 - ✅ Fully responsive layout for desktop and mobile
@@ -15,17 +35,6 @@ This website showcases my skills, projects, education, and contact information i
 - ✅ Contact section with styled form and social links
 - ✅ Fixed footer and customizable color theme
 
-
-portfolio/
-│
-├── assets/
-│ ├── hero.png
-│ ├── favicon.png
-│ ├── project1.jpg
-│ ├── project2.jpg
-├── index.html
-├── style.css
-├── README.md
 
 ## 🛠️ Technology Stack
 
@@ -40,10 +49,17 @@ portfolio/
 | Deployment     | GitHub Pages      
 
 
-
+🎨 Customization Guide
+1. Change Colors
+Modify CSS variables in :root:
+  :root {
+  --primary-color: #3498db;  /* Blue */
+  --dark-color: #2c3e50;     /* Navy */
+  --accent-color: #e74c3c;   /* Red */
+}
 
 ## 🚀 How to Run Locally
-
+Option 1: Local Setup
 1. Clone the repository:
   git clone https://github.com/MercyMuthio/portfolio-site.git
 
@@ -51,8 +67,22 @@ portfolio/
    cd portfolio-site
 3.Launch index.html in your browser.
 
-✨ Live Demo
-🔗 [View Portfolio Website](https://mercymuthio.github.io/portfolioMercy/)
+Option 2: 🚀 Deployment
+
+GitHub Pages
+Go to Settings > Pages in your GitHub repo.
+
+Select main branch and /root folder.
+
+Your site will be live at username.github.io/portfolio.
+
+or
+
+Go to Netlify.
+
+Drag & drop your index.html and assets folder.
+
+Your site will be live at your-site.netlify.app.
 
 
 

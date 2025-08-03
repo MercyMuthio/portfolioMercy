@@ -1,455 +1,596 @@
-/* Global Styles */
+/* ==================== */
+/* GLOBAL STYLES & VARIABLES */
+/* ==================== */
+
+/* CSS Custom Properties for consistent theming */
 :root {
-  --primary-color: #3498db;
-  --dark-color: #2c3e50;
-  --light-color: #ecf0f1;
-  --accent-color: #e74c3c;
+  --primary-color: linear-gradient( #3498db, #2c3e50,#a8b3b9 ,#67a3e7);
+  --dark-color: #2c3e50;    /* Dark blue for text and accents */
+  --light-color: #ecf0f1;   /* Light gray for backgrounds */
+  --accent-color: #e74c3c;  /* Red accent color */
 }
 
+/* Universal reset for consistent baseline */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;       /* Remove default margins */
+  padding: 0;      /* Remove default padding */
+  box-sizing: border-box; /* Include padding/borders in element dimensions */
 }
+
+/* ==================== */
+/* TOP NOTIFICATION BAR */
+/* ==================== */
 .top-bar {
-  background: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 2rem;
-  position: relative;
-  z-index: 101;
+  background: var(--primary-color); /* Use primary color */
+  color: white;                    /* White text for contrast */
+  text-align: center;              /* Center-align text */
+  padding: 0.5rem;                 /* Add internal spacing */
+  font-size: 2rem;                 /* Large text size */
+  position: relative;              /* Establish positioning context */
+  z-index: 101;                    /* Ensure it stays above other content */
 }
 
+/* ==================== */
+/* BODY & BASE STYLES */
+/* ==================== */
 body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
-  color:#2c3e50;
-  background-color:rgb(183, 193, 204);
-   padding-top: 80px; /* Push content below fixed header */
-
+  width: 100%;                     /* Full viewport width */
+  max-width: 100%;                 /* Prevent horizontal overflow */
+  overflow-x: hidden;              /* Hide horizontal scrollbar */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+  line-height: 1.6;                /* Comfortable line spacing */
+  color: #2c3e50;                  /* Dark text color */
+  background-color: rgb(183, 193, 204); /* Light blue-gray background */
+  padding-top: 80px;               /* Space for fixed header */
 }
 
+/* Link styling */
 a {
-  text-decoration:none;
-  color: var(--primary-color);
+  text-decoration: none;           /* Remove default underline */
+  color: var(--primary-color);     /* Use primary color */
 }
 
+/* Button styling */
 .btn {
-  display: inline-block;
-  background: var(--primary-color);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  display: inline-block;          /* Allow padding/margins */
+  background: var(--primary-color); /* Primary color background */
+  color: white;                   /* White text */
+  padding: 0.8rem 1.5rem;         /* Comfortable click area */
+  border: none;                   /* Remove default border */
+  border-radius: 5px;             /* Slightly rounded corners */
+  cursor: pointer;                /* Change cursor to pointer */
+  transition: all 0.3s ease;      /* Smooth hover transitions */
 }
 
+/* Button hover state */
 .btn:hover {
-  background: var(--dark-color);
-  transform: translateY(-3px);
+  background: var(--dark-color);  /* Darken background on hover */
+  transform: translateY(-3px);    /* Slight lift effect */
 }
 
-/* Header */
+/* ==================== */
+/* HEADER & NAVIGATION */
+/* ==================== */
 header {
-  background: rgb(183, 193, 204);
-  color: rgb(255, 255, 255);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  z-index: 100;
-  top: 0;
-  left: 0;
+  background: rgb(183, 193, 204); /* Match body background */
+  color: rgb(255, 255, 255);      /* White text */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;                    /* Full width */
+  z-index: 100;                   /* Below top bar */
+  top: 0;                         /* Stick to top */
+  left: 0;                        /* Align left */
 }
+
+/* Navigation list */
 nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 1.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;;
+  display: flex;                  /* Horizontal layout */
+  justify-content: center;        /* Center items */
+  list-style: none;               /* Remove bullets */
+  padding: 1.5rem;               /* Add internal spacing */
+  flex-wrap: wrap;                /* Allow wrapping on small screens */
+  gap: 1rem;                     /* Space between items */
 }
 
+/* Navigation items */
 nav li {
-  margin: 0 1.5rem;
+  margin: 0 1.5rem;              /* Horizontal spacing */
 }
 
+/* Navigation links */
 nav a {
-  color: var(--dark-color);
-  font-weight: 600;
-  transition: color 0.3s;
+  color: var(--dark-color);      /* Dark text */
+  font-weight: 600;              /* Semi-bold */
+  transition: color 0.3s;        /* Smooth color transition */
 }
 
+/* Navigation hover state */
 nav a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color);   /* Change to primary color */
 }
+
+/* ==================== */
+/* DROPDOWN MENU */
+/* ==================== */
 .dropdown {
-  position: relative;
-  display: inline-block;
-  padding: 1rem;
+  position: relative;             /* Positioning context */
+  display: inline-block;          /* Inline with proper sizing */
+  padding: 1rem;                 /* Clickable area */
 }
 
+/* Dropdown trigger */
 .dropdown summary {
-  list-style: none;
-  cursor: pointer;
-  font-weight: 600;
-  color: var(--dark-color);
+  list-style: none;              /* Remove default arrow */
+  cursor: pointer;               /* Change cursor to pointer */
+  font-weight: 600;              /* Semi-bold */
+  color: var(--dark-color);      /* Dark text */
 }
 
+/* Dropdown menu */
 .dropdown-menu {
-  margin-top: 0.5rem;
-  background-color: white;
-  padding: 0.5rem 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  list-style: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 0.5rem;            /* Space from trigger */
+  background-color: white;       /* White background */
+  padding: 0.5rem 0;            /* Internal spacing */
+  border: 1px solid #ccc;       /* Light border */
+  border-radius: 5px;           /* Rounded corners */
+  list-style: none;             /* Remove bullets */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
+/* Dropdown items */
 .dropdown-menu li {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem;         /* Comfortable click area */
 }
 
+/* Dropdown links */
 .dropdown-menu li a {
-  text-decoration: none;
-  color: var(--dark-color);
-  display: block;
+  text-decoration: none;        /* Remove underline */
+  color: var(--dark-color);     /* Dark text */
+  display: block;               /* Full-width click area */
 }
 
+/* Dropdown hover state */
 .dropdown-menu li a:hover {
-  background-color: var(--light-color);
+  background-color: var(--light-color); /* Light highlight */
 }
 
-/* Hero Section */
+/* ==================== */
+/* HERO SECTION */
+/* ==================== */
 .hero {
- width: 100%;
-  
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-image: url('assets/hero.png'); 
-  background-position: center;
-  background-size: cover;  /* Add this */
-  background-repeat: no-repeat;
-  text-align: left;
-  padding-top: 60px;
-  
- 
+  width: 100%;                   /* Full width */
+  height: 100vh;                 /* Full viewport height */
+  position: relative;            /* Positioning context */
+  display: flex;                 /* Flex layout */
+  flex-direction: column;        /* Vertical stacking */
+  align-items: center;           /* Center horizontally */
+  justify-content: flex-start;   /* Align to top */
+  background-image: url('assets/hero.png'); /* Background image */
+  background-position: center;   /* Center image */
+  background-size: cover;        /* Cover entire area */
+  background-repeat: no-repeat;  /* No repeating */
+  text-align: left;              /* Left-align text */
+  padding-top: 60px;             /* Space for navigation */
 }
 
+/* Hero background blur effect */
 .hero-bg-blur {
-  position: absolute;
-  top: 1;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-image: url('assets/hero.png');
-   background-size: cover;
-  background-position: center;
-  filter: blur(3px);
-  z-index: 1;
+  position: absolute;            /* Absolute positioning */
+  top: 1;                       /* Align to top */
+  left: 0;                      /* Align to left */
+  height: 100%;                 /* Full height */
+  width: 100%;                 /* Full width */
+  background-image: url('assets/hero.png'); /* Match hero image */
+  background-size: cover;       /* Cover entire area */
+  background-position: center;  /* Center image */
+  filter: blur(3px);           /* Blur effect */
+  z-index: 1;                  /* Below content */
 }
 
+/* Hero overlay for better text contrast */
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(10, 10, 10, 0.966);  /* <--- Adjust 0.5 for more/less darkness */
-  z-index: 1;
-}
-.typewriter {
-     max-width: 100%;
-  width: 100%;
-  display: inline-block;
-  overflow: hidden;
-  border-right: 2px solid white;
-  white-space: nowrap;
-  animation: typing 3s steps(22) forwards, blink 10s step-end infinite;
-  font-size: 2.5rem;
-  color: white;
-  margin: 0 auto;
-  text-align: left;
-    overflow-wrap: break-word;
-}
-.typewriter.delay {
-  animation-delay: 3.5s;
-  animation-duration: 2s;
+  content: '';                  /* Required for pseudo-element */
+  position: absolute;           /* Absolute positioning */
+  top: 0; left: 0;             /* Cover entire area */
+  width: 100%; height: 100%;   /* Full dimensions */
+  background: rgba(10, 10, 10, 0.966); /* Dark overlay */
+  z-index: 1;                  /* Above background, below content */
 }
 
+/* ==================== */
+/* TYPEWRITER EFFECT */
+/* ==================== */
+.typewriter {
+  max-width: 100%;              /* Don't overflow container */
+  width: 100%;                 /* Full width */
+  display: inline-block;       /* Proper text wrapping */
+  overflow: hidden;           /* Hide overflow */
+  border-right: 2px solid white; /* Cursor effect */
+  white-space: nowrap;        /* Keep text on one line */
+  animation: typing 3s steps(22) forwards, blink 10s step-end infinite; /* Combined animations */
+  font-size: 2.5rem;         /* Large text */
+  color: white;             /* White text */
+  margin: 0 auto;           /* Center horizontally */
+  text-align: left;         /* Left-align */
+  overflow-wrap: break-word; /* Prevent overflow */
+}
+
+/* Delayed typewriter animation */
+.typewriter.delay {
+  animation-delay: 3.5s;    /* Start after first animation */
+  animation-duration: 2s;   /* Shorter duration */
+}
+
+/* Typewriter typing animation */
 @keyframes typing {
   from {
-    width: 0;
+    width: 0;              /* Start with no width */
   }
   to {
-    width: 100ch; 
+    width: 100ch;          /* Expand to full width */
   }
 }
 
+/* Cursor blink animation */
 @keyframes blink {
   50% {
-    border-color: transparent;
-  }
-}
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .typewriter {
-    font-size: 1.2rem;
+    border-color: transparent; /* Hide cursor */
   }
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
-  box-shadow: 0 5px 15px rgba(250, 247, 247, 0.1);
-  margin-bottom: 1.5rem;
-}
 
 
-
+/* ==================== */
+/* HERO CONTENT */
+/* ==================== */
 .hero-content {
-  position: relative;
-  z-index: 2; 
-  max-width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
+  position: relative;        /* Above overlay */
+  z-index: 2;               /* Above background elements */
+  max-width: 90%;          /* Don't touch edges */
+  margin: 0 auto;          /* Center horizontally */
+  text-align: center;      /* Center text */
+  padding: 20px;          /* Internal spacing */
 }
 
+/* Hero heading */
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: rgb(245, 242, 242);
+  font-size: 3rem;        /* Very large text */
+  margin-bottom: 1rem;   /* Space below */
+  color: rgb(245, 242, 242); /* Off-white color */
 }
 
+/* Hero paragraph */
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #fdf7f7;
+  font-size: 1.2rem;     /* Slightly larger text */
+  margin-bottom: 2rem;  /* More space below */
+  color: #fdf7f7;      /* Light text */
 }
 
-/* Sections */
+/* ==================== */
+/* CONTENT SECTIONS */
+/* ==================== */
 .section {
-  padding: 5rem 10%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 5rem 10%;     /* Generous spacing */
+  max-width: 1200px;    /* Prevent overly wide text */
+  margin: 0 auto;      /* Center sections */
 }
 
+/* Section paragraphs */
 .section p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem; /* Add space below each paragraph */
-  line-height: 1.6;       /* Make lines easier to read */
+  font-size: 1.1rem;          /* Comfortable reading size */
+  margin-bottom: 1.5rem;     /* Space between paragraphs */
+  line-height: 1.6;         /* Comfortable line spacing */
 }
 
+/* Section headings */
 .section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--dark-color);
+  font-size: 2.5rem;       /* Large heading */
+  margin-bottom: 2rem;    /* Space below */
+  text-align: center;    /* Center-aligned */
+  color: var(--dark-color); /* Dark text */
 }
-/* Skills */
+
+/* ==================== */
+/* SKILLS SECTION */
+/* ==================== */
 .skills {
-  margin: 2rem 0;
+  margin: 2rem 0;        /* Vertical spacing */
 }
 
+/* Skills list */
 .skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  list-style: none;
-  margin-top: 1rem;
-  color: black
+  display: flex;                /* Horizontal layout */
+  flex-wrap: wrap;             /* Allow wrapping */
+  justify-content: center;    /* Center items */
+  gap: 1rem;                 /* Space between items */
+  list-style: none;         /* Remove bullets */
+  margin-top: 1rem;        /* Space above */
+  color: black            /* Black text */
 }
 
+/* Individual skills */
 .skills li {
-  background: var(--light-color);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  background: var(--light-color); /* Light background */
+  padding: 0.5rem 1rem;         /* Comfortable size */
+  border-radius: 20px;         /* Pill-shaped */
 }
 
-/* Projects */
+/* ==================== */
+/* PROJECTS SECTION */
+/* ==================== */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  display: grid;                                      /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem;                                        /* Space between cards */
+  margin-top: 2rem;                                /* Space above */
 }
 
+/* Project cards */
 .project-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  background: white;                              /* White background */
+  border-radius: 10px;                           /* Rounded corners */
+  overflow: hidden;                             /* Clip content */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);   /* Subtle shadow */
+  transition: transform 0.3s;                  /* Smooth hover */
 }
 
+/* Project card hover effect */
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px);               /* Lift effect */
 }
 
+/* Project images */
 .project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 100%;                              /* Full width */
+  height: 200px;                           /* Fixed height */
+  object-fit: cover;                      /* Maintain aspect ratio */
 }
 
-
+/* Project titles */
 .project-card h3 {
-  padding: 1rem;
-  color: var(--dark-color);
+  padding: 1rem;                         /* Internal spacing */
+  color: var(--dark-color);             /* Dark text */
 }
 
+/* Project descriptions */
 .project-card p {
-  padding: 0 1rem 1rem;
-  color: #666;
+  padding: 0 1rem 1rem;                /* Internal spacing */
+  color: #666;                        /* Gray text */
 }
 
+/* Project links */
 .project-links {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  border-top: 1px solid #eee;
+  display: flex;                     /* Horizontal layout */
+  justify-content: space-between;   /* Space evenly */
+  padding: 1rem;                   /* Internal spacing */
+  border-top: 1px solid #eee;     /* Separator line */
 }
 
+/* Project link items */
 .project-links a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: flex;                 /* Flex layout */
+  align-items: center;          /* Center vertically */
+  gap: 0.5rem;                /* Space between icon/text */
 }
 
-
-/* Contact Form */
+/* ==================== */
+/* CONTACT FORM */
+/* ==================== */
 .contact-form {
-  max-width: 1000px;
-  margin:1rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  max-width: 1000px;          /* Reasonable max width */
+  margin: 1rem auto;         /* Center horizontally */
+  display: flex;            /* Flex layout */
+  flex-direction: column;  /* Vertical stacking */
+  gap: 2rem;             /* Space between fields */
 }
 
+/* Contact section styling */
 .contact-custom {
-  position: relative;
-  width: 100%;
-  max-width: 100vw;
-  background: linear-gradient(135deg, #3498db, #8e44ad); /* Blue to purple gradient */
-  margin: 0;
-  padding: 10rem 5rem;
-  color: white;
+  position: relative;                    /* Positioning context */
+  width: 100%;                         /* Full width */
+  max-width: 100vw;                   /* Prevent overflow */
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+  margin: 0;                         /* Remove margins */
+  padding: 10rem 5rem;             /* Generous spacing */
+  color: white;                    /* White text */
 }
 
-
+/* Form inputs */
 .contact-form input,
 .contact-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #a52424;
-  border-radius: 20px;
-  font-family: verdana;
+  padding: 0.8rem;                /* Comfortable spacing */
+  border: 1px solid #a52424;     /* Red border */
+  border-radius: 20px;          /* Rounded corners */
+  font-family: verdana;        /* Consistent font */
 }
 
+/* ==================== */
+/* SOCIAL LINKS */
+/* ==================== */
 .social-links {
-  display: flex;
-  justify-content: left;
-  gap: 2rem;
-  margin-top: 2rem;
+  display: flex;               /* Horizontal layout */
+  justify-content: left;      /* Align left */
+  gap: 2rem;                 /* Space between icons */
+  margin-top: 2rem;         /* Space above */
 }
 
+/* Social icons */
 .social-links a {
-  font-size: 3rem;
-  color: var(--dark-color);
-  transition: color 0.3s;
+  font-size: 3rem;         /* Large icons */
+  color: var(--dark-color); /* Dark color */
+  transition: color 0.3s; /* Smooth transition */
 }
 
+/* Social hover state */
 .social-links a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Change to primary color */
 }
 
-
-/* Responsive Design */
+/* ==================== */
+/* RESPONSIVE DESIGN */
+/* ==================== */
 @media (max-width: 768px) {
+  /* Stack navigation items vertically */
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;     /* Vertical layout */
+    align-items: center;       /* Center items */
+    padding-left: 0;          /* Remove default padding */
   }
 
+  /* Adjust navigation spacing */
   nav li {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0;        /* Vertical spacing */
   }
 
+  /* Smaller hero heading */
   .hero h1 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 2rem;        /* Reduced size */
+    text-align: center;    /* Center-aligned */
   }
 
+  /* Adjust hero text */
   .hero p,
   .typewriter {
-    font-size: 1rem;
-    text-align: center;
-    width: 100%;
+    font-size: 1rem;      /* Smaller text */
+    text-align: center;  /* Center-aligned */
+    width: 100%;        /* Full width */
   }
 
+  /* Center typewriter container */
   .typewriter-container {
-    text-align: center;
+    text-align: center; /* Center-align */
+  }
+
+  /* Stack projects on mobile */
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column */
   }
 }
+
+/* ==================== */
+/* PAGE STRUCTURE */
+/* ==================== */
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100%;    /* Full viewport height */
+  margin: 0;      /* Remove default margins */
+  padding: 0;    /* Remove default padding */
 }
 
+/* Main content wrapper */
 .page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: flex;               /* Flex layout */
+  flex-direction: column;     /* Vertical stacking */
+  min-height: 100vh;         /* At least full viewport height */
 }
 
+/* ==================== */
+/* FOOTER */
+/* ==================== */
 footer {
-  margin-top: auto;
-  text-align: right;
-  padding: 2rem;
-  background: rgb(183, 193, 204);
-  color: black;
+  margin-top: auto;       /* Push to bottom */
+  text-align: right;     /* Right-aligned text */
+  padding: 2rem;        /* Internal spacing */
+  background: rgb(183, 193, 204); /* Match body background */
+  color: black;        /* Dark text */
 }
-/* Reset margins/padding for edge-to-edge text */
+
+/* ==================== */
+/* UTILITY CLASSES */
+/* ==================== */
+/* Reset for edge-to-edge text */
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Full-width sections */
+/* Full-width section styling */
 .section, .hero, .top-bar, header, footer {
-  width: 100%;
-  padding: 0 10px; /* Small padding to avoid touching edges */
-  box-sizing: border-box; /* Ensures padding doesn't add to width */
+  width: 100%;                /* Full width */
+  padding: 0 10px;           /* Small side padding */
+  box-sizing: border-box;    /* Include padding in width */
+}
+/* ==================== */
+/* HEADER WITH PROFILE PIC */
+/* ==================== */
+header {
+  display: flex;              /* Enable flex layout */
+  align-items: center;       /* Vertically center items */
+  padding: 0.5rem 1rem;     /* Add some padding */
 }
 
-/* Mobile-first adjustments */
+.profile-header {
+  display: flex;            /* Flex layout for profile section */
+  align-items: center;     /* Center vertically */
+  margin-right: auto;     /* Push nav to the right */
+  gap: 1rem;             /* Space between pic and name */
+}
+
+.header-profile-pic {
+  width: 50px;          /* Adjust size as needed */
+  height: 50px;        /* Keep equal to width for circle */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover;  /* Maintain aspect ratio */
+  border: 2px solid var(--primary-color); /* Colored border */
+}
+
+.profile-header span {
+  font-weight: 600;    /* Make name slightly bold */
+  color: var(--dark-color); /* Use your dark color variable */
+  white-space: nowrap; /* Prevent name from wrapping */
+}
+
+/* Adjust nav to account for profile pic */
+nav ul {
+  padding: 0.5rem;    /* Reduce padding to fit better */
+}
+
+/* For mobile view */
 @media (max-width: 768px) {
-  nav ul {
-    padding-left: 0; /* Remove default padding */
+  header {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0.5rem;
   }
-  .project-grid {
-    grid-template-columns: 1fr; /* Stack projects on mobile */
+  
+  .profile-header {
+    margin-right: 0;      /* Remove auto margin */
+    margin-bottom: 0.5rem; /* Space below profile */
+  }
+  
+  nav ul {
+    flex-direction: row;  /* Keep nav horizontal */
+    flex-wrap: wrap;     /* Allow wrapping if needed */
+  }
+}
+/* ==================== */
+/* CIRCULAR IMAGE STYLES */
+/* ==================== */
+.circular-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin: 2rem 0; /* Space above and below */
+  padding: 0 10px; /* Prevent touching edges */
+}
+
+.circular-image {
+  width: 500px; /* Adjust size as needed */
+  height: 500px; /* Must match width for perfect circle */
+  border-radius: 50%; /* Creates circular shape */
+  object-fit: cover; /* Ensures image fills circle without distortion */
+  border:5px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(155, 27, 27, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.circular-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .circular-image {
+    width: 150px; /* Slightly smaller on mobile */
+    height: 150px;
   }
 }
