@@ -40,7 +40,7 @@ portfolio/
 | Deployment     | GitHub Pages      
 
 
----
+
 
 ## 🚀 How to Run Locally
 
