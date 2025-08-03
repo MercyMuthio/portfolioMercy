@@ -8,10 +8,11 @@ This website showcases my skills, projects, education, and contact information i
 ✨ Live Demo
 🔗 [View Portfolio Website](https://mercymuthio.github.io/portfolioMercy/)
 
-📌 Table of Contents
-Project Overview
 
-Features
+<!-- Example for "Project Overview" -->
+<a id="project-overview"></a>
+## 🌐 Project Overview
+[Features](#features)
 
 Technologies Used
 
