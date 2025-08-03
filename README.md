@@ -11,20 +11,18 @@ This website showcases my skills, projects, education, and contact information i
 <!-- Example for "Project Overview" -->
 <a id="project-overview"></a>
 ## 🌐 Project Overview
-```bash
-1.[Live Demo](#live-demo)
-2. [🌟 Features](#features)
-3. [Technology Stack](#tachnologystack)
-4. [Project Structure](#projectstructure)
-5. [Getting started](#gettingstarted)
-6. [Screenshots](screenshorts)
-7. [♿ Performance & Accessibility](#performanceandaccessibility)
-8. [Browser Compatibility ](#browsercompatibility)
+## 📌 Table of Contents
+1. [Live Demo](#live-demo)
+2. [🌟 Features](#-features)
+3. [Technology Stack](#technology-stack)
+4. [Project Structure](#project-structure)
+5. [Getting Started](#getting-started)
+6. [Screenshots](#screenshots)
+7. [♿ Performance & Accessibility](#performance--accessibility)
+8. [Browser Compatibility](#browser-compatibility)
 9. [Contact](#contact)
-10. [License](#lincence)
-11. [Acknowledgments ](#acknowledge)
-```
-
+10. [License](#license)
+11. [Acknowledgments](#acknowledgments)
 ✨ Live Demo
 🔗 [View Portfolio Website](https://mercymuthio.github.io/portfolioMercy/)
 
