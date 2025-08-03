@@ -312,6 +312,7 @@ nav a:hover {
   object-fit: cover;
 }
 
+
 .project-card h3 {
   padding: 1rem;
   color: var(--dark-color);
@@ -427,4 +428,28 @@ footer {
   padding: 2rem;
   background: rgb(183, 193, 204);
   color: black;
+}
+/* Reset margins/padding for edge-to-edge text */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Full-width sections */
+.section, .hero, .top-bar, header, footer {
+  width: 100%;
+  padding: 0 10px; /* Small padding to avoid touching edges */
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    padding-left: 0; /* Remove default padding */
+  }
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack projects on mobile */
+  }
 }
