@@ -18,7 +18,7 @@ This website showcases my skills, projects, education, and contact information i
 4. [Project Structure](#project-structure)
 5. [Getting Started](#getting-started)
 6. [Screenshots](#screenshots)
-7. [♿ Performance & Accessibility](#performance--accessibility)
+7. [♿ Performance & Accessibility](#-performance--accessibility)
 8. [Browser Compatibility](#browser-compatibility)
 9. [Contact](#contact)
 10. [License](#license)
@@ -109,17 +109,17 @@ start index.html  # Windows
 ```
    ## Browser Compatibility
    Tested and works well on:
-```bash
+
 ✅ Chrome (latest)
 ✅ Firefox
 ✅ Safari
-```
+
 ## Contact
-```bash
+
 📧 Email: [mualukomercy8@gmail.com](mualukomercy8@gmail.cpm)
 💼 LinkedIn:[linkedin.com/in/MercyM](https://www.linkedin.com/in/mercy-mualuko-0415232a2/)
 🐙 GitHub: [github.com/MercyMuthio](github.com/MercyMuthio)
-```
+
 
 ## License
 
