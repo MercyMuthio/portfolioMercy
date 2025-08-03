@@ -23,7 +23,10 @@ This website showcases my skills, projects, education, and contact information i
 9. [Contact](#contact)
 10. [License](#license)
 11. [Acknowledgments](#acknowledgments)
-✨ Live Demo
+
+
+    
+## ✨ Live Demo
 🔗 [View Portfolio Website](https://mercymuthio.github.io/portfolioMercy/)
 
 ## 🌟 Features
@@ -77,7 +80,7 @@ To run this portfolio locally:
      git clone https://github.com/MercyMuthio/portfolio-site.git
     ```
 2.Open the folder:    
-# Screenshots or extra assets
+
  ```bash
  cd portfolio-site
 ```
@@ -88,7 +91,7 @@ start index.html  # Windows
 
 ```
 
-##Screenshots
+## Screenshots
 
 
 
@@ -97,32 +100,32 @@ start index.html  # Windows
 
 
 
-##♿ Performance & Accessibility
-
+## ♿ Performance & Accessibility
+```bash
 1. 🚀 Fast load times — minimal styles, optimized images
 2. 🎨 Accessible color contrast for better readability
 3. ⌨️ Keyboard navigable and screen-reader friendly
 4. 📱 Mobile-first design with smooth transitions
-
-   ##Browser Compatibility
+```
+   ## Browser Compatibility
    Tested and works well on:
-
+```bash
 ✅ Chrome (latest)
 ✅ Firefox
 ✅ Safari
-
-##Contact
-
+```
+## Contact
+```bash
 📧 Email: [mualukomercy8@gmail.com](mualukomercy8@gmail.cpm)
 💼 LinkedIn:[linkedin.com/in/MercyM](https://www.linkedin.com/in/mercy-mualuko-0415232a2/)
 🐙 GitHub: [github.com/MercyMuthio](github.com/MercyMuthio)
+```
 
-
-##License
+## License
 
 This project is open-source under the [MIT License](https://img.shields.io/badge/License-MIT-blue.svg).
 
-##Acknowledgments
+##  Acknowledgments
 Hackathon mentors and judges
 CSS-only navigation inspired by modern frontend patterns
 
